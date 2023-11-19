@@ -7,11 +7,16 @@
 .fw-600 {
     font-weight: 600;
 }
+.bg-black {
+    background-color: #000;
+}
 .display-5 {
     font-size: 2rem;
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--c-primary);
 }
 
 a {
@@ -23,21 +28,21 @@ nav {
     background-color: var(--c-primary);
 }
 
-main {
-    min-height: calc(100vh - 60.5px);
+article.hero {
     width: 100%;
     background-image: url("/images/hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    flex-direction: column;
+    min-height: calc(100vh - 60.5px);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
 }
 
-article.hero {
-    background-color: rgba(0, 70, 68, 0.3);
+article.hero>div {
     /* border: 1px solid #fff; */
+    background-color: rgba(0, 70, 68, 0.3);
     position: relative;
     backdrop-filter: blur(10px);
     padding-top: 1rem;
@@ -45,17 +50,11 @@ article.hero {
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     width: min(800px, 95%);
-    display: flex;
-    flex-direction: column;
     min-height: 400px;
+    margin: auto;
 }
 
-article.hero > div {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.hero:after {
+.hero>div:after {
     content: "";
     position: absolute;
     left: 5px;
@@ -66,7 +65,8 @@ article.hero > div {
     border-left: 5px solid var(--success);
     border-bottom: 5px solid var(--success);
 }
-.hero::before {
+
+.hero>div::before {
     content: "";
     position: absolute;
     right: 5px;
@@ -88,6 +88,7 @@ article.hero > div {
 #city-carousel {
     width: min(800px, 100%);
 }
+
 .carousel-item h1 {
     color: var(--success);
     font-size: 4.2rem;
@@ -100,22 +101,115 @@ article.hero > div {
     display: block;
 }
 
+/* 2nd section */
+.book-section {
+    background-color: black;
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.book-section label {
+    color: #fff;
+}
+
+.image-section,
+.form-section {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.package-gallery{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.package-gallery .card {
+    width: min(100%, 400px);
+    margin: 20px
+}
+
+.card-img-top {
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+}
+.card-img-top img {
+    object-fit: contain;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+
+.attractions ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: small;
+    column-gap: 1.5rem;
+}
+.attractions ul li {
+    margin: 0;
+}
+
+.services {
+    gap: 2rem;
+    justify-content: center;
+}
+.services .service-card {
+    transition: all 0.2s ease;
+    width: min(70%, 200px);
+    padding-top: 1.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--warning);
+}
+.service-card:hover {
+    transform: scale(1.01);
+    background-color: var(--white);
+}
+.service-card .service-img {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    width: 100px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.service-card .service-img img {
+    width: 100%;
+}
+.service-card h5 {
+    margin-top: 1rem;
+}
+
 @media (width < 540px) {
     .wlcm {
         font-size: 1.2rem;
     }
-    .display-5{
+
+    .display-5 {
         font-size: 1.5rem;
     }
+
     .carousel-item h1 {
         font-size: 2.2rem;
     }
+
     nav.navbar {
         padding-left: 0;
         padding-right: 5px;
     }
+
     .navbar-collapse {
         padding-left: 1rem;
+    }
+
+    .package-gallery .card {
+        margin: 20px 0 20px 0;
     }
 }
 
@@ -123,6 +217,12 @@ article.hero > div {
     nav.navbar {
         padding-top: 0;
         padding-bottom: 0;
+    }
+}
+
+@media (width < 992px) {
+    .book-section .image-section {
+        display: none;
     }
 }
 

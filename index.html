@@ -25,7 +25,9 @@
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path  d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+      </svg>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto text-white">
@@ -103,9 +105,296 @@
         <br>
         <button class="btn btn-success swipe-in">Book Now</button>
       </div>
-
     </article>
+    <section class="book-section">
+      <br>
+      <h3 class="text-white fw-600 text-center">Book Now</h3>
+      <br>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-6 image-section">
+            <img src="/images/travel.png" alt="Brand Image" class="img-fluid">
+          </div>
+
+          <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4 form-section">
+            <form id="bookingForm">
+              <div class="form-group">
+                <label for="whereTo">Where to:</label>
+                <select class="form-control form-control-sm" id="whereTo" required>
+                  <option value="">Select a place</option>
+                  <option value="Bavarian Alps">Bavarian Alps</option>
+                  <option value="Udaipur">Udaipur</option>
+                  <option value="Las Vegas">Las Vegas</option>
+                  <option value="Paris">Paris</option>
+                  <option value="Loire Valley">Loire Valley</option>
+                  <option value="Niagra Falls">Niagra Falls</option>
+                  <option value="Hamburg">Hamburg</option>
+                  <option value="Kerala">Kerala</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="numberOfPersons">How Many Persons:</label>
+                <input type="number" class="form-control form-control-sm" id="numberOfPersons" required>
+              </div>
+              <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" class="form-control form-control-sm" id="startDate" required>
+              </div>
+              <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <input type="date" class="form-control form-control-sm" id="endDate" required>
+              </div>
+              <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control form-control-sm" id="description" rows="5" minlength="50" maxlength="500"
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Book Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <br>
+      <br>
+      <h3 class="text-white fw-600 text-center">Travel Packages</h3>
+      <div class="d-flex flex-wrap container-fluid package-gallery justify-content-center">
+        <div class="card">
+          <img src="/images/kerala.webp" class="card-img-top" alt="Package 1">
+          <div class="card-body">
+            <h5 class="card-title">Kerala</h5>
+            <div class="attractions">
+              <ul>
+                <li>Backwaters</li>
+                <li>Munnar Tea Gardens</li>
+                <li>Periyar National Park</li>
+                <li>Alleppey Houseboats</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">Price: $100</p>
+              <p class="card-text">Rating: 4.5</p>
+            </div>
+            <button type="button" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/hamburg.jpeg" class="card-img-top" alt="Package 2">
+          <div class="card-body">
+            <h5 class="card-title">Hamburg</h5>
+            <div class="attractions">
+              <ul>
+                <li>Miniatur Wunderland</li>
+                <li>Elbphilharmonie</li>
+                <li>Speicherstadt</li>
+                <li>HafenCity</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">Price: $150</p>
+              <p class="card-text">Rating: 4.0</p>
+            </div>
+            <button type="button" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/las-vegas.webp" class="card-img-top" alt="Package 3">
+          <div class="card-body">
+            <h5 class="card-title">Las Vegas</h5>
+            <div class="attractions">
+              <ul>
+                <li>The Mob Museum</li>
+                <li>Fountains of Bellagio</li>
+                <li>Red Rock Canyon National Conservation Area</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">Price: $120</p>
+              <p class="card-text">Rating: 4.2</p>
+            </div>
+            <button type="button" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/udaipur.jpg" class="card-img-top" alt="Package 3">
+          <div class="card-body">
+            <h5 class="card-title">Udaipur</h5>
+            <div class="attractions">
+              <ul>
+                <li>City Palace </li>
+                <li>Lake Pichola</li>
+                <li>Jag Mandir</li>
+                <li>Saheliyon ki Bari</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">Price: $120</p>
+              <p class="card-text">Rating: 4.2</p>
+            </div>
+            <button type="button" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/loire-valley.jpg" class="card-img-top" alt="Package 3">
+          <div class="card-body">
+            <h5 class="card-title">Loire Valley</h5>
+            <div class="attractions">
+              <ul>
+                <li>Château de Chambord</li>
+                <li>Château de Chenonceau</li>
+                <li>Wine Tasting</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">Price: $120</p>
+              <p class="card-text">Rating: 4.2</p>
+            </div>
+            <button type="button" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/niagara-falls.webp" class="card-img-top" alt="Package 3">
+          <div class="card-body">
+            <h5 class="card-title">Niagra Falls</h5>
+            <div class="attractions">
+              <ul>
+                <li>Maid of the Mist</li>
+                <li>Cave of the Winds</li>
+                <li>Niagara Parks Butterfly Conservatory</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">Price: $120</p>
+              <p class="card-text">Rating: 4.2</p>
+            </div>
+            <button type="button" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/paris.jpg" class="card-img-top" alt="Package 3">
+          <div class="card-body">
+            <h5 class="card-title">Paris</h5>
+            <div class="attractions">
+              <ul>
+                <li>Eiffel Tower</li>
+                <li>Louvre Museum</li>
+                <li>Notre-Dame Cathedral</li>
+                <li>Montmartre</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="card-text">Price: $120</p>
+              <p class="card-text">Rating: 4.2</p>
+            </div>
+            <button type="button" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid bg-black">
+      <br>
+      <h3 class="text-white fw-600 text-center">Services</h3>
+      <br>
+      <div class="d-flex flex-wrap services">
+        <div class="service-card">
+          <div class="service-img">
+            <img src="/images/hotel-icon.png" alt="Hotel">
+          </div>
+          <h5>
+            Affordable Hotel
+          </h5>
+        </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="/images/food-and-drink-icon.png" alt="Food and Drinks Icon">
+          </div>
+          <h5>
+            Food & Drinks
+          </h5>
+        </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="/images/training-icon.png" alt="Guide">
+          </div>
+          <h5>
+            Safety Guide
+          </h5>
+        </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="/images/railway-icon.png" alt="Travel">
+          </div>
+          <h5>
+            Transportation Assistance
+          </h5>
+        </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="/images/maps-icon.png" alt="">
+          </div>
+          <h5>
+            Guided Tours
+          </h5>
+        </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="/images/male-services-support-icon.png" alt="Customer Support">
+          </div>
+          <h5>
+            24/7 Customer Support
+          </h5>
+        </div>
+      </div>
+      <br>
+    </section>
   </main>
+
+  <!-- Custom JavaScript -->
+  <script>
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.onsubmit = bookNow;
+    function bookNow(e) {
+      e.preventDefault();
+      // Validate form fields
+      if (validateForm()) {
+        alert("Booking successful!");
+        // You can add further logic here, such as submitting the form data to a server.
+      }
+    }
+
+    function validateForm() {
+      // Validate start and end dates
+      let startDate = document.getElementById("startDate").value;
+      let endDate = document.getElementById("endDate").value;
+
+      let tomorrow = new Date();
+      tomorrow.setDate(new Date().getDate() + 1);
+      let tomorrowISOString = tomorrow.toISOString().split('T')[0];
+
+      if (startDate < tomorrowISOString) {
+        alert("Start date must be tomorrow or later");
+        return false;
+      }
+
+      if (startDate >= endDate) {
+        alert("End date must be greater than the start date");
+        return false;
+      }
+
+      // Add your own validation logic for other fields if needed
+
+      // Check if all required fields are filled
+      return true;
+    }
+  </script>
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
