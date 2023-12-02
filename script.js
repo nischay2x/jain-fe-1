@@ -9,3 +9,4 @@ function loadAnimation(node, delayMultiplier) {
         node.classList.add('animated');
     }, [delay])
 }
+

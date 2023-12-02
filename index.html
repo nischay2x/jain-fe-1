@@ -155,7 +155,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="bg-black">
       <br>
       <br>
       <h3 class="text-white fw-600 text-center">Travel Packages</h3>
@@ -298,7 +298,7 @@
         </div>
       </div>
     </section>
-    <section class="container-fluid bg-black">
+    <section class="container-fluid">
       <br>
       <h3 class="text-white fw-600 text-center">Services</h3>
       <br>
@@ -354,23 +354,150 @@
       </div>
       <br>
     </section>
+    <section class="bg-black">
+      <br>
+      <h3 class="text-white fw-600 text-center">Gallery</h3>
+      <br>
+      <div id="gallery" class="container-fluid">
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/1600x1200?travel,group" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/1024x768?travel,bagpack" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/1366x768?travel,venice" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/1920x1080?travel,selfie" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/640x360?travel,india" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/320x640?travel,mountain" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/1200x1600?travel,luxury" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/800x600?travel,food" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/600x800?travel,beach" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/400x600?travel,rainforest" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/600x400?travel,group" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/1100x1600?travel,group" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/1600x1100?travel,group" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/992x768?travel,group" class="img-responsive">
+        </div>
+        <div class="img-hold">
+          <img src="https://source.unsplash.com/768x992?travel,group" class="img-responsive">
+        </div>
+      </div>
+      <div id="g-modal">
+        <img src="" id="g-modal-img" alt="">
+      </div>
+      <br>
+    </section>
+    <section id="about-us">
+      <div class="align-items-center justify-content-center container-fluid d-flex flex-wrap py-4 my-4">
+        <div class="col-md-5 col-lg-5 image-section">
+          <img src="/images/logo_large.png" class="img-fluid" alt="Logo Large">
+        </div>
+        <div class="col-12 col-md-7 col-lg-5 text-white">
+          <h3 class="fw-600 display-5">Wanderlust Travels</h3>
+          <hr class="bg-white">
+          <p>
+            <b>Establishment Year</b>: 2005
+            <br>
+            <br>
+            <b>
+              About Wanderlust Travels:
+            </b>
+            Wanderlust Travels is a renowned travel company dedicated to creating unforgettable travel experiences for
+            its clients. With a passion for exploration and a commitment to quality service, Wanderlust Travels has
+            become a trusted name in the travel industry.
+            <br>
+            <br>
+            <b>
+              Mission:
+            </b>
+            Our mission at Wanderlust Travels is to inspire and facilitate enriching journeys that broaden perspectives
+            and create lifelong memories. We strive to provide personalized and seamless travel solutions, ensuring our
+            clients have the most rewarding and stress-free travel experiences.
+          </p>
+        </div>
+        
+      </div>
+    </section>
   </main>
+  <footer class="text-center">
+    <div class="f-img py-4">
+      <img src="/images/logo.png" alt="Logo">
+    </div>
+    <div class="bg-black">
+      <div class="social-links d-flex align-items-center justify-content-center">
+          <a href="https://youtube.com" target="_blank">
+            <img src="/images/youtube-fill.svg" alt="Youtube Logo">
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="/images/facebook-circle-fill.svg" alt="Facebook Logo">
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <img src="/images/twitter-fill.svg" alt="Twitter Logo">
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <img src="/images/instagram-fill.svg" alt="Instagram">
+          </a>
+      </div>
+      <div class="fs-5 text-white">
+        &#9400; Wanderlust Travels 2023 | All Rights Reserved.
+      </div>
+    </div>
+  </footer>
 
-  <!-- Custom JavaScript -->
+  <script defer>
+    let images = document.querySelectorAll("#gallery img");
+    let modal = document.getElementById("g-modal");
+
+    modal.addEventListener("click", () => {
+      modal.style.display = "none";
+    })
+
+    images.forEach((img) => {
+      img.addEventListener("click", () => {
+        let imgUrl = img.getAttribute("src");
+
+        let modalImgBody = document.querySelector("#g-modal-img");
+        modalImgBody.setAttribute("src", imgUrl)
+
+        modal.style.display = "grid";
+      });
+    });
+  </script>
+
   <script>
     const bookingForm = document.getElementById('bookingForm');
     bookingForm.onsubmit = bookNow;
     function bookNow(e) {
       e.preventDefault();
-      // Validate form fields
       if (validateForm()) {
         alert("Booking successful!");
-        // You can add further logic here, such as submitting the form data to a server.
       }
     }
 
     function validateForm() {
-      // Validate start and end dates
       let startDate = document.getElementById("startDate").value;
       let endDate = document.getElementById("endDate").value;
 
@@ -388,16 +515,9 @@
         return false;
       }
 
-      // Add your own validation logic for other fields if needed
-
-      // Check if all required fields are filled
       return true;
     }
   </script>
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -408,6 +528,7 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="/script.js" defer></script>
+
 </body>
 
 </html>
