@@ -276,6 +276,28 @@ footer .f-img {
     border-bottom: 1px solid #fff;
 }
 
+footer .f-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+@media (width > 540px) {
+    footer .f-add {
+        flex-direction: row;
+    }
+    .f-add address {
+        text-align: right;
+        padding-right: 2rem;
+        border-right: 1px solid #fff;
+    }
+    .f-add .other {
+        text-align: left;
+        padding-left: 2rem;
+    }
+}
+
 .social-links {
     gap: 1rem;
     padding-top: 3rem;
