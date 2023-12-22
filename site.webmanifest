@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Wanderlust Travels",
+    "short_name": "Wanderlust",
+    "description": "A renowned travel company dedicated to creating unforgettable travel experiences for its clients.",
     "icons": [
         {
             "src": "/images/android-chrome-192x192.png",
