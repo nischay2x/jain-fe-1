@@ -145,8 +145,8 @@
                 return;
             }
 
-            if (!password) {
-                alert('Please enter your password.');
+            if (!password || password.length < 8) {
+                alert('Password must be 8 characters long!');
                 return;
             }
 
@@ -155,7 +155,7 @@
                 return;
             }
 
-            this.submit();
+            window.location.replace("/");
         });
         function validateDob(dob) {
             let currentDate = new Date();

@@ -76,7 +76,8 @@
           <a class="nav-link" href="#about-us">About</a>
         </li>
       </ul>
-      <a href="register.html" class="btn btn-success my-2 my-sm-0">Login / Register</a>
+      <a href="login.html" style="display: none;" class="btn btn-success my-2 my-sm-0" id="log-in-button">Login / Register</a>
+      <button class="btn btn-success my-2 my-sm-0" style="display: none;" id="log-out-button">Log Out</button>
     </div>
   </nav>
 
@@ -619,6 +620,26 @@
 
       return true;
     }
+  </script>
+  <script defer>
+    const logInButton = document.getElementById('log-in-button');
+    const logOutButton = document.getElementById('log-out-button');
+
+    window.addEventListener("load", () => {
+      const isLoggedIn = localStorage.getItem("LOGGED_IN");
+      if(isLoggedIn) {
+        logInButton.style.display = 'none';
+        logOutButton.style.display = 'block';
+      } else {
+        logOutButton.style.display = 'none';
+        logInButton.style.display = 'block';
+      }
+    });
+
+    logOutButton.addEventListener('click', () => {
+      localStorage.clear();
+      window.location.reload();
+    })
   </script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
